@@ -53,11 +53,21 @@ exports.handle = (client) => {
     }
   })
 
+  const handleFavourite = client.createStep({
+    satisfied(){
+      return false
+    },
+    prompt(){
+      client.addResponse('favourite')
+      client.done()
+    }
+  })
   client.runFlow({
     classifications: {
       // map inbound message classifications to names of streams
       goodbye: 'goodbye',
-      greeting: 'greeting'
+      greeting: 'greeting',
+      favourite: 'favourite'
     },
     autoResponses: {
       // configure responses to be automatically sent as predicted by the machine learning model
@@ -65,6 +75,7 @@ exports.handle = (client) => {
     streams: {
       goodbye: handleGoodbye,
       greeting: handleGreeting,
+      favourite: handleFavourite,
       main: 'onboarding',
       onboarding: [sayHello],
       end: [untrained],
