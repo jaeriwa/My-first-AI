@@ -58,7 +58,7 @@ exports.handle = (client) => {
       return false
     },
     prompt(){
-      client.addResponse('favourite')
+      client.addResponse('turing/human')
       client.done()
     }
   })
@@ -67,7 +67,7 @@ exports.handle = (client) => {
       // map inbound message classifications to names of streams
       goodbye: 'goodbye',
       greeting: 'greeting',
-      favourite: 'favourite'
+      favourite: 'turing/human'
     },
     autoResponses: {
       // configure responses to be automatically sent as predicted by the machine learning model
