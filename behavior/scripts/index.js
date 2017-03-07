@@ -58,7 +58,7 @@ exports.handle = (client) => {
       return false
     },
     prompt(){
-      client.addResponse('favourite')
+      client.addResponse('favourite-r')
       client.done()
     }
   })
