@@ -6,11 +6,11 @@ timestamp: 2017-03-06T10:34:08.1165489Z
 Hi
 * greeting
 
-< Hello world, I mean human
+< Hello human 
 * greeting
 
 Goodbye
 * goodbye
 
-< See ya later!
+< See you in the future
 * goodbye
